@@ -18,10 +18,6 @@ room: #init all rooms, then connect
 class GameHandler:
     _inventory
     _current_room
-    _events = [
-        {type: "input", "text": "hello!"},
-        {type: "output", "text": "hey there!"}
-    ]
     
     loop()
     render()
@@ -52,6 +48,10 @@ class Room(): #upper element
     render()
 
 class Terminal(): #user imput
+    _events = [
+        {type: "input", "value": "hello!"},
+        {type: "output", "value": "hey there!"}
+    ]
     on_keyboard_down()
     render()
 
